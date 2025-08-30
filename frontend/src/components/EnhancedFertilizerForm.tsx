@@ -56,7 +56,8 @@ const EnhancedFertilizerForm = ({ onSubmit, user }: EnhancedFertilizerFormProps)
     soilType: '', 
     location: '',
     coordinates: null as LocationData | null,
-    soilData: null as SoilData | null
+    soilData: null as SoilData | null,
+    sowingDate: ''
   });
   const [saving, setSaving] = useState(false);
   const [fetchingLocation, setFetchingLocation] = useState(false);
@@ -200,7 +201,8 @@ const EnhancedFertilizerForm = ({ onSubmit, user }: EnhancedFertilizerFormProps)
         unit: newFarm.unit as any,
         crop_type: newFarm.cropType,
         soil_type: newFarm.soilType,
-        location: newFarm.location || undefined
+        location: newFarm.location || undefined,
+        sowing_date: newFarm.sowingDate || undefined
       };
       
       const { data, error } = await farmService.createFarm(farmData);
@@ -213,7 +215,7 @@ const EnhancedFertilizerForm = ({ onSubmit, user }: EnhancedFertilizerFormProps)
       
       await loadFarms();
       setIsAddFarmOpen(false);
-      setNewFarm({ name: '', size: '', unit: 'hectares', cropType: '', soilType: '', location: '', coordinates: null, soilData: null });
+      setNewFarm({ name: '', size: '', unit: 'hectares', cropType: '', soilType: '', location: '', coordinates: null, soilData: null, sowingDate: '' });
       
       if (data) {
         handleFarmSelect(data.id);
@@ -561,7 +563,7 @@ const EnhancedFertilizerForm = ({ onSubmit, user }: EnhancedFertilizerFormProps)
           <DialogHeader>
             <DialogTitle>Add New Farm</DialogTitle>
             <DialogDescription>
-              Add a new farm with automatic soil type detection based on your location
+              Add a new farm - all fields are required including location detection and sowing date
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4">
@@ -674,6 +676,20 @@ const EnhancedFertilizerForm = ({ onSubmit, user }: EnhancedFertilizerFormProps)
                   </div>
                 </div>
               )}
+            </div>
+
+            <div className="space-y-2">
+              <Label className="text-sm">Sowing Date (Optional)</Label>
+              <Input
+                type="date"
+                value={newFarm.sowingDate}
+                onChange={(e) => setNewFarm(v => ({ ...v, sowingDate: e.target.value }))}
+                className="w-full"
+                max={new Date().toISOString().split('T')[0]} // Prevent future dates
+              />
+              <p className="text-xs text-gray-500">
+                Select the date when you sowed/planted the crop
+              </p>
             </div>
 
             <div className="space-y-3">

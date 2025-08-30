@@ -150,6 +150,8 @@ const translations = {
     'form.formFilledWithSensorData': 'Form has been filled with real-time sensor data',
     'form.noDataAvailable': 'No Data Available',
     'form.realTimeSensorDataNotAvailable': 'Real-time sensor data is not available',
+    'form.sowingDate': 'Sowing Date',
+    'form.selectSowingDate': 'Select the date when you sowed/planted the crop',
     
     // Common
     'common.loading': 'Loading...',
@@ -404,6 +406,8 @@ const translations = {
     'form.formFilledWithSensorData': 'फॉर्म को रीयल-टाइम सेंसर डेटा से भर दिया गया है',
     'form.noDataAvailable': 'कोई डेटा उपलब्ध नहीं है',
     'form.realTimeSensorDataNotAvailable': 'रीयल-टाइम सेंसर डेटा उपलब्ध नहीं है',
+    'form.sowingDate': 'बुवाई की तारीख',
+    'form.selectSowingDate': 'वह तारीख चुनें जब आपने फसल बोई/लगाई थी',
     
     // Common
     'common.loading': 'लोड हो रहा है...',
@@ -654,6 +658,8 @@ const translations = {
     'form.formFilledWithSensorData': 'ਫਾਰਮ ਨੂੰ ਰੀਅਲ-ਟਾਈਮ ਸੈਂਸਰ ਡੇਟਾ ਨਾਲ ਭਰ ਦਿੱਤਾ ਗਿਆ ਹੈ',
     'form.noDataAvailable': 'ਕੋਈ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',
     'form.realTimeSensorDataNotAvailable': 'ਰੀਅਲ-ਟਾਈਮ ਸੈਂਸਰ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',
+    'form.sowingDate': 'ਬੀਜਣ ਦੀ ਮਿਤੀ',
+    'form.selectSowingDate': 'ਉਹ ਮਿਤੀ ਚੁਣੋ ਜਦੋਂ ਤੁਸੀਂ ਫਸਲ ਬੀਜੀ/ਲਗਾਈ ਸੀ',
     
     // Common
     'common.loading': 'ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...',

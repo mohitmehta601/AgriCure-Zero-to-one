@@ -32,10 +32,11 @@ export interface CreateFarmData {
   unit: 'hectares' | 'acres' | 'bigha';
   crop_type: string;
   soil_type: string;
-  location?: string;
+  location: string;
   latitude?: number;
   longitude?: number;
   soil_data?: any; // JSON data for soil properties
+  sowing_date: string; // ISO date string (YYYY-MM-DD)
 }
 
 export interface UpdateFarmData {
@@ -48,6 +49,7 @@ export interface UpdateFarmData {
   latitude?: number;
   longitude?: number;
   soil_data?: any; // JSON data for soil properties
+  sowing_date?: string; // ISO date string (YYYY-MM-DD)
 }
 
 export const farmService = {

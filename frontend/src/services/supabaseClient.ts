@@ -65,6 +65,7 @@ export interface Farm {
   latitude?: number;
   longitude?: number;
   soil_data?: any; // JSON data for detailed soil properties
+  sowing_date?: string; // ISO date string (YYYY-MM-DD)
   created_at: string;
   updated_at: string;
 }
